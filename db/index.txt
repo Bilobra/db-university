@@ -17,6 +17,11 @@ ESERCIZIO:
 
     SELECT * FROM `students` WHERE YEAR(`date_of_birth`) < 1991;
 
+    SELECT *, TIMESTAMPDIFF(YEAR,`date_of_birth`,CURDATE()) AS `age`
+    FROM `students` 
+    WHERE TIMESTAMPDIFF(YEAR,`date_of_birth`,CURDATE()) > 30;
+
+
 ----------------------------------------------------------------
 
 
