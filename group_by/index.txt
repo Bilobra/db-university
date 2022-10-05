@@ -15,7 +15,14 @@
 
 3. Calcolare la media dei voti di ogni appello d'esame
 
+    VERSIONE SBAGLIATA:
     SELECT AVG(`vote`) as `media_voti`, COUNT(`exam_id`) AS `esame`
+    FROM `exam_student`
+    GROUP BY `exam_id`;
+
+
+    VERSIONE CORRETTA:
+    SELECT AVG(`vote`) as `media_voti`, `exam_id`
     FROM `exam_student`
     GROUP BY `exam_id`;
 
